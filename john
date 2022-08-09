@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ -z "${JOHN}" ];
+then
+  echo "\$JOHN not set. Defaulting to /john";
+  export JOHN=/john;
+fi
+
+$JOHN/run/john $@
